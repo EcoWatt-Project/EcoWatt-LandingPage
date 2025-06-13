@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Poppins;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Navbar*/
+
+
+.menu-section  {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    z-index: 1;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.menu-nav-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-nav-custom ul {
+    justify-content: center; 
+    display: flex;
+    width: 100%;
+}
+
+.menu-nav-custom ul li {
+    padding: 20px 40px ;
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav-custom ul li a{
+    font-family: poppins;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.menu-nav-custom ul li p {
+    color: white;
+    font-family: 'poppins';
+    font-size: 20px;
+    margin: 0 60px 0 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 40%;
+}
+
+.logo a{
+    font-family: 'poppins';
+    color: white;
+}
+
+.menu-toggle i {
+    color: white;
+    font-size: 25px;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu label {
+    display: none;
+}
+
+.access-app .buttons a {
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 4px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #192641;
+}
+
+.access-app .buttons a:hover{
+    background-color: #192641;
+    color: #FFF;
+}
+
+.access-app .buttons a {
+    white-space: nowrap;
+    display: inline-block; 
+}
+
+.access-app {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* header */
+
+.header-section {
+    width: 100%;
+    padding-top: 100px;
+    background:url(../img/header1-img.png) no-repeat center center/cover;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.slider-txt {
+    width: 55%;
+}
+
+.slider-txt h1{
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.header-img {
+    padding-top: 30px;
+    width: 45%;
+}
+
+.slider-txt h2{
+    font-size: 45px;
+    margin: 10px 0 10px 0;
+    font-weight: 800;
+    color: #2C2C2C;
+}
+
+.slider-txt p{
+    font-size: 18px;
+}
+
+.header-buton {
+    margin-top: 35px; 
+    display: inline-block;
+}
+
+.header-buton a {
+    background-color: white;
+    color: #000;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.header-buton a:hover {
+    background-color: #b86b34;
+    color: white;
+}
+
+.swiper {
+    overflow: hidden;
+    position: relative;
+}
+.swiper-wrapper {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+.swiper-slide {
+    width: calc(100%/3);
+}
+
+.slide2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide2 .slider-txt {
+    flex-direction: column;
+    width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.header-text{
+    background-color: #E5D6CF;
+}
+
+.header-text p{
+    text-align: center;
+    padding: 8px 0;
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        padding: 20px;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .menu label {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 25px;
+    }
+
+    .menu .menu-nav-custom {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #019392;
+        display: none;
+        flex-direction: column;
+        align-items: start;
+        padding: 10px 20px;
+        z-index: 1;
+    }
+
+    .menu-nav-custom ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-nav-custom ul li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu-toggle:checked ~ .menu-nav-custom {
+        display: flex;
+    }
+
+    .logo {
+        display: none;
+    }
+
+}
