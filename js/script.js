@@ -1,3 +1,13 @@
+// Navbar
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".menu-section");
+    if (window.scrollY > 100) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
 // header
 
 const botonLeft= document.querySelector(".swiper-button-prev"); 

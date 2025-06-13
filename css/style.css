@@ -24,14 +24,13 @@ a {
 
 /*Navbar*/
 
-
 .menu-section  {
     background-color: transparent;
     position: fixed;
     top: 0;
     width: 100%;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
-    z-index: 1;
+    z-index: 3;
 }
 
 .menu {
@@ -130,6 +129,30 @@ a {
     align-items: center;
 }
 
+.menu-section.scrolled {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.menu-section.scrolled .menu-nav-custom ul li a,
+.menu-section.scrolled .menu-toggle i,
+.menu-section.scrolled .logo a {
+    color: #192641;
+}
+
+.menu-section,
+.menu-nav-custom ul li a,
+.menu-toggle i,
+.logo a {
+    transition: all 0.3s ease;
+}
+
+.menu-section.scrolled .access-app .buttons a {
+    background-color: #192641;
+    color: #FFF;
+}
+
+
 /* header */
 
 .header-section {
@@ -140,6 +163,8 @@ a {
     display: flex;
     align-items: center;
     position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .slider {
@@ -149,7 +174,7 @@ a {
 }
 
 .slider-txt h1{
-    background-color: #ffffff46;
+    background-color: #ffffff1f;
     color: white;
     font-size: 18px;
     font-weight: 500;
@@ -166,7 +191,7 @@ a {
 .slider-txt h2{
     font-size: 45px;
     margin: 10px 0 10px 0;
-    font-weight: 700;
+    font-weight: 600;
     color: white;
 }
 
@@ -177,7 +202,6 @@ a {
 .header-buton {
     margin-top: 35px; 
     display: inline-block;
-    font-weight: 700;
 }
 
 .header-buton a {
@@ -185,7 +209,8 @@ a {
     color: #192641;
     padding: 10px 30px;
     border-radius: 10px;
-
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .header-buton a:hover {
@@ -324,6 +349,7 @@ a {
         padding: 20px;
         flex-wrap: wrap;
         position: relative;
+        
     }
 
     .menu label {
@@ -368,4 +394,109 @@ a {
         display: none;
     }
 
+    .header-section h2 {
+        font-size: 36px;
+    }
+
+    .menu-section.scrolled .menu-nav-custom ul li a {
+        color: white;
+    }
+
+}
+
+
+/*Features Section*/
+
+.features-section {
+    margin-top: 120px; 
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.features-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.features-text {
+    flex: 1 1 500px;
+}
+
+.features-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.features-text .highlight {
+    color: #FF9027;
+}
+
+.features-intro {
+    font-size: 18px;
+    color: #FF9027;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.features-description {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.features-list li img {
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+}
+
+.features-list li strong {
+    font-weight: 600;
+    color: #000;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.features-list li p {
+    margin: 0;
+    color: #444;
+    font-size: 15px;
+}
+
+.features-img {
+    flex: 1 1 400px;
+}
+
+.features-img img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        padding: 20px;
+        flex-wrap: wrap;
+        position: relative;
+        
+    }
 }
