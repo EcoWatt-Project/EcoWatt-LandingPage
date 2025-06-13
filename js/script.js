@@ -51,3 +51,19 @@ function moveToLeft(){
     let porcentajeTransladar=-numOperacion*anchoSlider;
    slider.style.transform=`translate(${porcentajeTransladar}%)`
 }
+
+//Brand Section
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
+const brandSection = document.querySelector('.brand-content');
+
+    window.addEventListener('scroll', function () {
+    if (isInViewport(brandSection)) {
+        brandSection.classList.add('animate');
+    }
+});
