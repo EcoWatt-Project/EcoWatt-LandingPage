@@ -1,3 +1,37 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const sliderTst = document.getElementById('testimonial-slider');
+  const dots = document.querySelectorAll('.dot');
+
+  let currentSlide = 0;
+  const cardsPerView = 3;
+
+  function updateSlider() {
+    const card = sliderTst.querySelector('.testimonial-card');
+    if (!card) return;
+    
+    const cardWidth = card.offsetWidth + 20; // Card width + gap
+    const offset = cardWidth * cardsPerView * currentSlide;
+
+    sliderTst.style.transform = `translateX(-${offset}px)`;
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[currentSlide]) {
+      dots[currentSlide].classList.add('active');
+    }
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = parseInt(dot.getAttribute('data-index'));
+      currentSlide = index;
+      updateSlider();
+    });
+  });
+
+  updateSlider(); 
+});
+
+
 // Navbar
 window.addEventListener("scroll", function() {
     const navbar = document.querySelector(".menu-section");
