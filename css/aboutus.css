@@ -228,6 +228,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  width: max-content;
 }
 
 .testimonial-card {
@@ -238,6 +239,7 @@
   max-width: 300px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   text-align: left;
+  flex: 0 0 300px; 
 }
 
 .user {
@@ -271,15 +273,13 @@
 
 .slider-wrapper {
   overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  max-width: 960px; 
+  margin: 0 auto;
 }
 
 .cards-container {
   display: flex;
   transition: transform 0.5s ease;
-  width: max-content;
 }
 
 .slider-dots {
@@ -300,4 +300,25 @@
 
 .dot.active {
   background-color: #fbbf24;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .testimonial-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    margin-right: 16px;
+  }
+
+  .slider-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+  }
+
 }

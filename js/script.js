@@ -1,34 +1,36 @@
+// Testimonios
 document.addEventListener('DOMContentLoaded', function () {
-  const sliderTst = document.getElementById('testimonial-slider');
-  const dots = document.querySelectorAll('.dot');
+    if (window.innerWidth <= 768) return;
 
-  let currentSlide = 0;
-  const cardsPerView = 3;
+    const sliderTst = document.getElementById('testimonial-slider');
+    const cards = sliderTst.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.dot');
 
-  function updateSlider() {
-    const card = sliderTst.querySelector('.testimonial-card');
-    if (!card) return;
-    
-    const cardWidth = card.offsetWidth + 20; // Card width + gap
-    const offset = cardWidth * cardsPerView * currentSlide;
+    let currentIndex = 0;
+    const cardsPerView = 3;
 
-    sliderTst.style.transform = `translateX(-${offset}px)`;
+    function updateSlider() {
+        const card = cards[0];
+        const cardWidth = card.offsetWidth + 20; 
+        const offset = cardWidth * currentIndex;
 
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[currentSlide]) {
-      dots[currentSlide].classList.add('active');
+        sliderTst.style.transform = `translateX(-${offset}px)`;
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        const activeDotIndex = Math.floor(currentIndex / 1); 
+        if (dots[activeDotIndex]) {
+        dots[activeDotIndex].classList.add('active');
+        }
     }
-  }
 
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const index = parseInt(dot.getAttribute('data-index'));
-      currentSlide = index;
-      updateSlider();
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.getAttribute('data-index'));
+        updateSlider();
+        });
     });
-  });
 
-  updateSlider(); 
+  updateSlider();
 });
 
 
