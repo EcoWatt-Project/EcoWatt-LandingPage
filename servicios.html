@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoWatt - Nuestros Servicios</title>
-     <link rel="stylesheet" href="servicios.css">
+    <title>EcoWatt</title>
+     <link rel="stylesheet" href="css/servicios.css">
      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
  <header>
+  <div class="header-service-content">
         <div class="menu-section">
             <div class="menu container">
                 <div class="logo">
@@ -22,10 +24,10 @@
                 </label>
                 <nav class="menu-nav-custom">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="index.html#header">Inicio</a></li>
+                        <li><a href="index.html#about-us">Sobre Nosotros</a></li>
                         <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Contactanos</a></li>
+                        <li><a href="index.html#contact-us">Contactanos</a></li>
                     </ul>
                 </nav>
                 <div class="access-app">
@@ -38,11 +40,14 @@
                 </div>
             </div>
         </div>
-    <h1>Nuestros Servicios</h1>
-    <p>Soluciones inteligentes adaptadas a tu estilo de vida y negocio.</p>
+        <div class="header-txt">
+          <h1>Nuestros Servicios</h1>
+          <p>Soluciones inteligentes adaptadas a tu estilo de vida y negocio.</p>
+        </div>
+      </div>
   </header>
 
-  <section class="seccion-ia">
+  <section class="seccion-ia separator">
     <h2>IA que aprende de ti para ayudarte a <span>ahorrar</span> más.</h2>
     <p>Nuestra inteligencia artificial analiza tu consumo, hábitos y horarios para ofrecerte la experiencia energética más eficiente</p>
     
@@ -127,7 +132,7 @@
   </div>
   </section>
   
-  <section class="planes-section">
+  <section class="planes-section separator">
   <h2 class="planes-title">Planes</h2>
   <div class="planes-cards">
 
@@ -181,6 +186,31 @@
     </div>
   </div>
   </section>
+  <footer>
+        <div class="footer-content container separator">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="EcoWatt Logo" class="footer-logo">
+                <p class="footer-company-name">ECOWATT</p>
+            </div>
+
+            <nav class="footer-nav">
+                <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Terminos y condiciones</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="footer-copyright">EcoWatt &copy; 2025</p>
+        </div>
+        </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
-<script src="js/script.js"></script>

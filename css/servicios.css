@@ -1,26 +1,32 @@
 
-header {
-      background:url('img/Group\ 227.png'); /* ← Puedes reemplazarlo con una imagen real */
-      background-size: cover;
-      background-position: center;
-      padding: 100px 20px;
-      text-align: center;
-      color: white;
+.header-service-content {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
 }
 
-header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+.header-txt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background:url(../img/Group\ 227.png)  no-repeat center center/cover; 
+  min-height: 65vh;
 }
 
-header p {
-      font-size: 1.2em;
+.header-txt h1 {
+    font-size: 3em;
+}
+
+.header-txt p {
+    font-size: 1.2em;
 }
 
 .seccion-ia {
-      background-color: white;
-      text-align: center;
-      padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .seccion-ia h2 {
@@ -136,6 +142,11 @@ header p {
 .tabla-beneficios td:first-child {
   text-align: left;
 }
+
+.planes-section {
+  margin-bottom: 100px;
+}
+
 .planes-section {
   padding: 2rem;
   background-color: #fff;
