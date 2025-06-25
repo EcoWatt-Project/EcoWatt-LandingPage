@@ -163,7 +163,7 @@ a {
     width: 100%;
     padding-top: 70px;
     min-height: 75vh;
-    background:url(../img/header1-img.png) no-repeat center center/cover;
+    background:url(../images/header1-img.png) no-repeat center center/cover;
     display: flex;
     align-items: center;
     position: relative;
