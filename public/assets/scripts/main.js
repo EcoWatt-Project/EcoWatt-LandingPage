@@ -1,4 +1,3 @@
-// Testimonios
 document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth <= 768) return;
 

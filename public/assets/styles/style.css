@@ -148,7 +148,7 @@ a {
 .menu-nav-custom ul li a,
 .menu-toggle i,
 .logo a {
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
 }
 
 .menu-section.scrolled .access-app .buttons a {
