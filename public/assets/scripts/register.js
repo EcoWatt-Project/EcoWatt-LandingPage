@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             alert('Registration successful! Redirecting to the application.');
-            window.location.href = '../appEcoWatt.html';
+            window.location.href = 'appEcoWatt.html';
         });
     }
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Login attempt:', { email, password });
 
             alert('Login successful! Redirecting to the application.');
-            window.location.href = '../appEcoWatt.html'; 
+            window.location.href = 'appEcoWatt.html';
         });
     }
 
