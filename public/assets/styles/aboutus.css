@@ -185,7 +185,7 @@
     }
 
     .valores-tarjetas {
-        margin-top: 0;
+        margin-top: 20px;
         flex-direction: column;
         align-items: center; 
         padding-bottom: 20px; 
@@ -200,6 +200,49 @@
     .valores-box {
         padding: 0 10px; 
     }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+  }
+
+  .about-us .content,
+  .about-us .image {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .about-us .image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-us .card {
+    margin-bottom: 20px;
+  }
+
+
+  .valores-header {
+    padding: 40px 20px 60px 20px;
+    height: auto;
+  }
+
+  .valores-tarjetas {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+
+  .tarjeta-valor {
+    flex: 1 1 280px;
+    max-width: 300px;
+    margin: 10px;
+  }
 }
 
 /* TESTIMONIOS CSS */
@@ -301,24 +344,26 @@
 .dot.active {
   background-color: #fbbf24;
 }
-
 @media (max-width: 768px) {
-  .cards-container {
-    flex-wrap: nowrap;
+  .slider-wrapper {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
+  .cards-container {
+    flex-wrap: nowrap;
+    width: max-content;
+    scroll-behavior: smooth;
+  }
+
   .testimonial-card {
-    flex: 0 0 80%;
+    flex: 0 0 85%;
     scroll-snap-align: start;
-    margin-right: 16px;
+    margin-right: 20px;
   }
 
-  .slider-wrapper {
-    overflow: hidden;
-    max-width: 100%;
+  .slider-dots {
+    display: none;
   }
-
 }

@@ -20,12 +20,37 @@ a {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px; 
 }
-
 .separator {
     margin-top: 80px; 
 }
 
+.separador {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 60px auto;
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+.separador-line {
+    flex: 1;
+    height: 2px;
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.separador-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+    white-space: nowrap;
+    text-align: center;
+}
 /*Navbar*/
 
 .menu-section  {
@@ -144,12 +169,6 @@ a {
     color: #192641;
 }
 
-.menu-section,
-.menu-nav-custom ul li a,
-.menu-toggle i,
-.logo a {
-    /* transition: all 0.3s ease; */
-}
 
 .menu-section.scrolled .access-app .buttons a {
     background-color: #192641;
